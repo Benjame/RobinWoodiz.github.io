@@ -355,7 +355,9 @@
 </blockquote>
 <p><img src="http://7xqoad.com1.z0.glb.clouddn.com/%E5%86%85%E5%AD%98Wyprowadzenie_mikroprocesora_8086.jpeg" alt="8086引脚"></p>
 <p>8086微处理器被搭载在IBM 成功的个人电脑IBM PC XT上，随着上世纪80年代PC机的浪潮，8086为Intel最为成功的微处理器之一，不仅销量大同时伴随着因此而产生的各类软件系统。其中就有一个鼎鼎有名的软件——Microsoft Disk Operating System（MS DOS）。</p>
-<p>既然采用了这个基本的地址模型，后续的80x86处理器不得不延续这种做法，负责就会导致不兼容。我们无法知道IBM在1979年选择Intel 8088（一种与8086同代的处理器）作为它新开发的PC的处理器的确切原因，毕竟从技术上说，当时有许多公司可以提供更为出色的方案，如Motorola和National Semiconductor。由于选择了Intel的芯片，IBM帮助Intel在接下来的数十年里财源滚滚，就像IBM选择了Microsoft的MS-DOS作为PC的操作系统从而使Microsoft飞黄腾达一样。</p>
+<p>既然采用了这个基本的地址模型，后续的80x86处理器不得不延续这种做法，否则就会导致不兼容。我们无法知道IBM在1979年选择Intel 8088（一种与8086同代的处理器）作为它新开发的PC的处理器的确切原因，毕竟从技术上说，当时有许多公司可以提供更为出色的方案，如Motorola和National Semiconductor。由于选择了Intel的芯片，IBM帮助Intel在接下来的数十年里财源滚滚，就像IBM选择了Microsoft的MS-DOS作为PC的操作系统从而使Microsoft飞黄腾达一样。</p>
+<p>用于最初的IBM PC的8088处理器只是8086的廉价版本，它允许当时大量存在的支持8位的芯片继续使用。此后对80x86处理器的升级都体现在“更小、更快、更便宜以及更多指令”上，例如80186增加了10条并不是很重要的指令。<strong>80286差不多就是80186（内置了一些外设端口支持），但它第一次试图扩展内存地址空间。他把内存控制器移到处理器外部，并提供了一种野心勃勃的内存模式，称为<code>虚拟模式</code>。</strong> <em>在虚拟模式中，段寄存器不在于偏移地址相加，而是作为一个存放实际段地址的表提供索引。这种地址模式也成为保护模式（protected mode） ，它依然是16位的。MS-Windows就使用286的保护模式作为它的标准地址模式。</em>这些处理器卖的并没有8086系列成功，直到1985年Intel推出Intel 80386处理器。80386在80286的基础上增加了2种新的地址模式：32位的保护模式和虚拟的8086模式。Microsoft的旗舰产品Windows NT操作系统（Windows 10则属于Windows NT 10.0）和增强模式下的Windows都采用了32位的保护模式。而另一种内存模式，虚拟的8086模式则可以创建一种内存空间为1MB的8086虚拟机。几个虚拟机可以同时运行从而支持MS-DOS的虚拟多任务系统。</p>
+<p><img src="http://7xqoad.com1.z0.glb.clouddn.com/%E5%86%85%E5%AD%98KU80386SLB1A-25-a.jpg" alt="80386微处理器"></p>
 
       
     </div>
