@@ -6,22 +6,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>对内存的思考 | Bigshark yu&#39;s pages</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="640K ought to be enough for everybody — Bill Gates                       1981
-
-程序设计中的内存模型内存管理是C++最令人切齿痛恨的问题，也是C++最有争议的问题，C++高手从中获得了更好的性能，更大的自由，C++菜鸟的收获则是一遍一遍的检查代码和对C++的痛恨，但内存管理在C++中无处不在，内存泄漏几乎在每个C++程序">
+  <meta name="description" content="640K ought to be enough for everybody — Bill Gates                       1981">
 <meta property="og:type" content="article">
 <meta property="og:title" content="对内存的思考">
 <meta property="og:url" content="http://yoursite.com/2016/02/02/对内存的思考/index.html">
 <meta property="og:site_name" content="Bigshark yu's pages">
-<meta property="og:description" content="640K ought to be enough for everybody — Bill Gates                       1981
-
-程序设计中的内存模型内存管理是C++最令人切齿痛恨的问题，也是C++最有争议的问题，C++高手从中获得了更好的性能，更大的自由，C++菜鸟的收获则是一遍一遍的检查代码和对C++的痛恨，但内存管理在C++中无处不在，内存泄漏几乎在每个C++程序">
-<meta property="og:updated_time" content="2016-02-02T05:51:07.000Z">
+<meta property="og:description" content="640K ought to be enough for everybody — Bill Gates                       1981">
+<meta property="og:updated_time" content="2016-02-02T07:56:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对内存的思考">
-<meta name="twitter:description" content="640K ought to be enough for everybody — Bill Gates                       1981
-
-程序设计中的内存模型内存管理是C++最令人切齿痛恨的问题，也是C++最有争议的问题，C++高手从中获得了更好的性能，更大的自由，C++菜鸟的收获则是一遍一遍的检查代码和对C++的痛恨，但内存管理在C++中无处不在，内存泄漏几乎在每个C++程序">
+<meta name="twitter:description" content="640K ought to be enough for everybody — Bill Gates                       1981">
   
     <link rel="alternative" href="/atom.xml" title="Bigshark yu&#39;s pages" type="application/atom+xml">
   
@@ -245,14 +239,6 @@
         <blockquote>
 <p>640K ought to be enough for everybody — Bill Gates                       1981</p>
 </blockquote>
-<h2 id="u7A0B_u5E8F_u8BBE_u8BA1_u4E2D_u7684_u5185_u5B58_u6A21_u578B"><a href="#u7A0B_u5E8F_u8BBE_u8BA1_u4E2D_u7684_u5185_u5B58_u6A21_u578B" class="headerlink" title="程序设计中的内存模型"></a>程序设计中的内存模型</h2><p>内存管理是C++最令人切齿痛恨的问题，也是C++最有争议的问题，C++高手从中获得了更好的性能，更大的自由，C++菜鸟的收获则是一遍一遍的检查代码和对C++的痛恨，但内存管理在C++中无处不在，内存泄漏几乎在每个C++程序中都会发生，因此要想成为C++高手，内存管理一关是必须要过的，除非放弃C++，转到Java或者.NET，他们的内存管理基本是自动的，当然你也放弃了自由和对内存的支配权，还放弃了C++超绝的性能。</p>
-<h3 id="u5185_u5B58_u5206_u914D_u65B9_u5F0F"><a href="#u5185_u5B58_u5206_u914D_u65B9_u5F0F" class="headerlink" title="内存分配方式"></a>内存分配方式</h3><hr>
-<h4 id="u7B80_u4ECB"><a href="#u7B80_u4ECB" class="headerlink" title="简介"></a>简介</h4><p>　在C++中，内存分成5个区，他们分别是堆、栈、自由存储区、全局/静态存储区和常量存储区。</p>
-<p>　　<strong>栈</strong>：在执行函数时，函数内局部变量的存储单元都可以在栈上创建，函数执行结束时这些存储单元自动被释放。栈内存分配运算内置于处理器的指令集中，效率很高，但是分配的内存容量有限。</p>
-<p>　　<strong>堆</strong>：就是那些由<code>new</code>分配的内存块，他们的释放编译器不去管，由我们的应用程序去控制，一般一个<code>new</code>就要对应一个<code>delete</code>。如果程序员没有释放掉，那么在程序结束后，操作系统会自动回收。</p>
-<p>　　<strong>自由存储区</strong>：就是那些由<code>malloc</code>等分配的内存块，他和堆是十分相似的，不过它是用<code>free</code>来结束自己的生命的。</p>
-<p>　　<strong>全局/静态存储区</strong>：全局变量和静态变量被分配到同一块内存中，在以前的C语言中，全局变量又分为初始化的和未初始化的，在C++里面没有这个区分了，他们共同占用同一块内存区。</p>
-<p>　　<strong>常量存储区</strong>：这是一块比较特殊的存储区，他们里面存放的是常量，不允许修改。</p>
 
       
     </div>
