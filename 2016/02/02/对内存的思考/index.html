@@ -23,7 +23,7 @@
 <meta property="og:image" content="http://7xqoad.com1.z0.glb.clouddn.com/%E5%86%85%E5%AD%98640px-KL_Intel_D8086.jpg">
 <meta property="og:image" content="http://7xqoad.com1.z0.glb.clouddn.com/%E5%86%85%E5%AD%98Wyprowadzenie_mikroprocesora_8086.jpeg">
 <meta property="og:image" content="http://7xqoad.com1.z0.glb.clouddn.com/%E5%86%85%E5%AD%98KU80386SLB1A-25-a.jpg">
-<meta property="og:updated_time" content="2016-02-02T13:43:35.000Z">
+<meta property="og:updated_time" content="2016-02-02T13:45:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="对内存的思考（一）">
 <meta name="twitter:description" content="伟大的比尔盖茨曾经失言：
@@ -255,7 +255,7 @@
 <p>伟大的比尔盖茨曾经失言：</p>
 <p>640K ought to be enough for everybody — Bill Gates           1981</p>
 </blockquote>
-<h3 id="u4ECE_u4E00_u5757_u82AF_u7247_u8BF4_u8D77_u2014Intel_80x86_u7CFB_u5217"><a href="#u4ECE_u4E00_u5757_u82AF_u7247_u8BF4_u8D77_u2014Intel_80x86_u7CFB_u5217" class="headerlink" title="从一块芯片说起—Intel 80x86系列"></a>从一块芯片说起—Intel 80x86系列</h3><hr>
+<h2 id="u4ECE_u4E00_u5757_u82AF_u7247_u8BF4_u8D77_u2014Intel_80x86_u7CFB_u5217"><a href="#u4ECE_u4E00_u5757_u82AF_u7247_u8BF4_u8D77_u2014Intel_80x86_u7CFB_u5217" class="headerlink" title="从一块芯片说起—Intel 80x86系列"></a>从一块芯片说起—Intel 80x86系列</h2><hr>
 <p>现代的Intel处理器可以追溯到最早期的Intel芯片。随着顾客对芯片的使用越来越复杂，从单纯的计算器到统计、制表、游戏，他们对芯片的要求也越来越高。1978年中Intel推出第一款16位微处理器<code>Intel 8086</code>,随后于1979年推出8088。这是一款划时代意义的处理器，它采用16位数据总线，20位外部总线，物理寻址空间达到1M。注意8086的数据总线与外部地址总线数目并不相同即内部数据总线传输的16位数据只能表示$2^{16}$个字节（Byte），而外部地址总线传输20位数据则可表示$2^{20}$个字节（Byte），即微处理器中单独一个<code>字</code>（16位，2字节），不能表示所有的地址空间，Intel为了解决这个问题发明了分段机制。</p>
 <p><img src="http://7xqoad.com1.z0.glb.clouddn.com/%E5%86%85%E5%AD%98640px-KL_Intel_D8086.jpg" alt="8086处理器"></p>
 <blockquote>
@@ -266,7 +266,7 @@
 <p>既然采用了这个基本的地址模型，后续的80x86处理器不得不延续这种做法，否则就会导致不兼容。我们无法知道IBM在1979年选择Intel 8088（一种与8086同代的处理器）作为它新开发的PC的处理器的确切原因，毕竟从技术上说，当时有许多公司可以提供更为出色的方案，如Motorola和National Semiconductor。由于选择了Intel的芯片，IBM帮助Intel在接下来的数十年里财源滚滚，就像IBM选择了Microsoft的MS-DOS作为PC的操作系统从而使Microsoft飞黄腾达一样。</p>
 <p>用于最初的IBM PC的8088处理器只是8086的廉价版本，它允许当时大量存在的支持8位的芯片继续使用。此后对80x86处理器的升级都体现在“更小、更快、更便宜以及更多指令”上，例如80186增加了10条并不是很重要的指令。<strong>80286差不多就是80186（内置了一些外设端口支持），但它第一次试图扩展内存地址空间。他把内存控制器移到处理器外部，并提供了一种野心勃勃的内存模式，称为<code>虚拟模式</code>。</strong> <em>在虚拟模式中，段寄存器不在于偏移地址相加，而是作为一个存放实际段地址的表提供索引。这种地址模式也成为保护模式（protected mode） ，它依然是16位的。MS-Windows就使用286的保护模式作为它的标准地址模式。</em>这些处理器卖的并没有8086系列成功，直到1985年Intel推出Intel 80386处理器。80386在80286的基础上增加了2种新的地址模式：32位的保护模式和虚拟的8086模式。Microsoft的旗舰产品Windows NT操作系统（Windows 10则属于Windows NT 10.0）和增强模式下的Windows都采用了32位的保护模式。而另一种内存模式，虚拟的8086模式则可以创建一种内存空间为1MB的8086虚拟机。几个虚拟机可以同时运行从而支持MS-DOS的虚拟多任务系统。</p>
 <p><img src="http://7xqoad.com1.z0.glb.clouddn.com/%E5%86%85%E5%AD%98KU80386SLB1A-25-a.jpg" alt="80386微处理器"></p>
-<h3 id="Intel_80x86_u5185_u5B58_u6A21_u578B_u4EE5_u53CA_u5B83_u7684_u5DE5_u4F5C_u539F_u7406"><a href="#Intel_80x86_u5185_u5B58_u6A21_u578B_u4EE5_u53CA_u5B83_u7684_u5DE5_u4F5C_u539F_u7406" class="headerlink" title="Intel 80x86内存模型以及它的工作原理"></a>Intel 80x86内存模型以及它的工作原理</h3><hr>
+<h2 id="Intel_80x86_u5185_u5B58_u6A21_u578B_u4EE5_u53CA_u5B83_u7684_u5DE5_u4F5C_u539F_u7406"><a href="#Intel_80x86_u5185_u5B58_u6A21_u578B_u4EE5_u53CA_u5B83_u7684_u5DE5_u4F5C_u539F_u7406" class="headerlink" title="Intel 80x86内存模型以及它的工作原理"></a>Intel 80x86内存模型以及它的工作原理</h2><hr>
 <p>在Intel 80x86内存模型中，段是内存模型设计的结果，在80x86的内存模型中，各处理器的地址空间并不相同，但它们都被分割成以<code>64KB</code>为单位的区域，每个这样的区域就被称为<code>段</code>。作为</p>
 
       
