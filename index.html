@@ -364,110 +364,14 @@
 <h3 id="MS-DOS_u7684640K_u9650_u5236_u7F18_u4F55_u800C_u6765"><a href="#MS-DOS_u7684640K_u9650_u5236_u7F18_u4F55_u800C_u6765" class="headerlink" title="MS-DOS的640K限制缘何而来"></a>MS-DOS的640K限制缘何而来</h3><blockquote>
 <p>在MS-DOS下运行的应用程序都会面临一个严峻的内存限制，那就是可用内存只有640KB。这个限制源于Intel 8086这个最初的DOS机器的最大地址范围。8086支持1MB的内存。之所以只能使用640KB是因为某些段（每个64KB）必须予以保留，供系统所用。</p>
 </blockquote>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">段</th>
-<th style="text-align:center">保留用于</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">F0000到FFFFF</th>
-<th style="text-align:center">64KB，永久性的ROM区域BIOS、诊断信息</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">D0000到EFFFF</th>
-<th style="text-align:center">128KB，用于ROM存储区域</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">C0000到CFFFF</th>
-<th style="text-align:center">64KB，用于BIOS扩展</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">B0000到BFFFF</th>
-<th style="text-align:center">64KB，用于常规性的内存显示</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">A0000到AFFFF</th>
-<th style="text-align:center">64KB，用于显示内存扩展</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th style="text-align:center">其余</th>
-<th></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center"></td>
-</tr>
-</tbody>
-</table>
-<table>
-<thead>
-<tr>
-<th>00000到9FFFF</th>
-<th style="text-align:center">640KB,用于应用程序</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
-</table>
+<p>段                                        保存用于</p>
+<p>F0000到FFFFF                    64KB，永久性的ROM区域BIOS、诊断信息</p>
+<p>D0000到EFFFF                    128KB，用于ROM存储区域</p>
+<p>C0000到CFFFF                    64KB，用于BIOS扩展</p>
+<p>B0000到BFFFF                    64KB，用于常规性的内存显示</p>
+<p>A0000到AFFFF                    64KB，用于显示内存扩展</p>
+<p>其余                            </p>
+<p>00000到9FFFF                        640KB，用于应用程序</p>
 
       
     </div>
