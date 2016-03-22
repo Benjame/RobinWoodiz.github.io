@@ -118,7 +118,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Java/" style="font-size: 10px;">Java</a> <a href="/tags/OJ/" style="font-size: 10px;">OJ</a> <a href="/tags/Qt/" style="font-size: 10px;">Qt</a> <a href="/tags/内存/" style="font-size: 20px;">内存</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/数素数/" style="font-size: 10px;">数素数</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/程序设计/" style="font-size: 10px;">程序设计</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/结题报告/" style="font-size: 10px;">结题报告</a> <a href="/tags/解题报告/" style="font-size: 10px;">解题报告</a> <a href="/tags/计算机组成原理/" style="font-size: 20px;">计算机组成原理</a>
+						<a href="/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/OJ/" style="font-size: 10px;">OJ</a> <a href="/tags/Qt/" style="font-size: 10px;">Qt</a> <a href="/tags/内存/" style="font-size: 20px;">内存</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/数素数/" style="font-size: 10px;">数素数</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/程序设计/" style="font-size: 10px;">程序设计</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/结题报告/" style="font-size: 10px;">结题报告</a> <a href="/tags/解题报告/" style="font-size: 10px;">解题报告</a> <a href="/tags/计算机组成原理/" style="font-size: 20px;">计算机组成原理</a>
 					</div>
 				</section>
 				
@@ -201,6 +201,64 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-记一次JAVA-Debug之旅" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/03/23/记一次JAVA-Debug之旅/" class="article-date">
+  	<time datetime="2016-03-23T00:10:00.000Z" itemprop="datePublished">2016-03-23</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/03/23/记一次JAVA-Debug之旅/">记一次JAVA Debug之旅</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>先把代码贴上：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Test;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Created by woodizrobin on 16/3/22.</span><br><span class="line"> * Program Name: woodizrobin</span><br><span class="line"> * Platform: JDK 1.7</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> N = in.nextInt();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> M = in.nextInt();</span><br><span class="line">            <span class="keyword">int</span>[] store = <span class="keyword">new</span> <span class="keyword">int</span>[M];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; M; j++) &#123;</span><br><span class="line">                store[j] = in.nextInt();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> sum = <span class="number">0</span>; <span class="comment">//sum为素数和</span></span><br><span class="line">            <span class="comment">//以下程序负责求出素数和</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; M; k++) &#123;</span><br><span class="line">                <span class="comment">//依次扫描store[i]，(0 ~ M - 1)，是素数就加到sum上</span></span><br><span class="line">                <span class="keyword">int</span> q = (<span class="keyword">int</span>) Math.sqrt((<span class="keyword">double</span>) store[k]);</span><br><span class="line">                <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">2</span>; l &lt;= q || store[k] == <span class="number">2</span> || store[k] == <span class="number">3</span>; l++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (store[k] % l == <span class="number">0</span>) &#123;</span><br><span class="line">                        flag = <span class="keyword">false</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    sum += store[k];</span><br><span class="line">                    flag = <span class="keyword">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(sum);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debug/">Debug</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-结题报告之数素数问题" class="article article-type-post" itemscope itemprop="blogPost">
   
