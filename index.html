@@ -511,7 +511,7 @@
 <p>We will create a working directory to use named “raspberry”. Our first step is to get and install a cross compiling toolchain.</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/raspberry&#10;$ cd ~/raspberry&#10;$ wget http://swap.tsmt.eu/gcc-4.7-linaro-rpi-gnueabihf.tbz&#10;$ tar xfj gcc-4.7-linaro-rpi-gnueabihf.tbz</span><br></pre></td></tr></table></figure>
 <h3 id="u5F00_u53D1_u811A_u672C"><a href="#u5F00_u53D1_u811A_u672C" class="headerlink" title="开发脚本"></a>开发脚本</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh&#10;WORKINGDIRECTORY=$HOME/raspberry&#10;TOOLCHAIN=gcc-4.7-linaro-rpi-gnueabihf&#10;MOUNTPOINT=/mnt/raspberry-rootfs&#10;export PATH=$PATH:$WORKINGDIRECTORY/$TOOLCHAIN/bin</span><br></pre></td></tr></table></figure>
-<p>运行该脚本，</p>
+<h3 id="Windows_u4E0B_u79FB_u690D_u65B9_u6CD5"><a href="#Windows_u4E0B_u79FB_u690D_u65B9_u6CD5" class="headerlink" title="Windows下移植方法"></a>Windows下移植方法</h3><p><a href="http://www.cnblogs.com/wpf_gd/articles/5243927.html" target="_blank" rel="external">参考教程</a></p>
 
       
     </div>
