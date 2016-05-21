@@ -118,7 +118,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/OJ/" style="font-size: 10px;">OJ</a> <a href="/tags/Qt/" style="font-size: 10px;">Qt</a> <a href="/tags/内存/" style="font-size: 20px;">内存</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/数素数/" style="font-size: 10px;">数素数</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/程序设计/" style="font-size: 10px;">程序设计</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/结题报告/" style="font-size: 10px;">结题报告</a> <a href="/tags/解题报告/" style="font-size: 10px;">解题报告</a> <a href="/tags/计算机组成原理/" style="font-size: 20px;">计算机组成原理</a>
+						<a href="/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Lintcode/" style="font-size: 10px;">Lintcode</a> <a href="/tags/OJ/" style="font-size: 10px;">OJ</a> <a href="/tags/Qt/" style="font-size: 10px;">Qt</a> <a href="/tags/内存/" style="font-size: 20px;">内存</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/数素数/" style="font-size: 10px;">数素数</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/程序设计/" style="font-size: 10px;">程序设计</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/结题报告/" style="font-size: 10px;">结题报告</a> <a href="/tags/解题报告/" style="font-size: 10px;">解题报告</a> <a href="/tags/计算机组成原理/" style="font-size: 20px;">计算机组成原理</a>
 					</div>
 				</section>
 				
@@ -203,6 +203,75 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Lintcode-report-Sqrt-x" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/21/Lintcode-report-Sqrt-x/" class="article-date">
+  	<time datetime="2016-05-21T09:26:12.000Z" itemprop="datePublished">2016-05-21</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/21/Lintcode-report-Sqrt-x/">Lintcode-report-Sqrt(x)</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="Sqrt_28X_29"><a href="#Sqrt_28X_29" class="headerlink" title="Sqrt(X)"></a>Sqrt(X)</h4><blockquote>
+<p>Implement int <code>sqrt(int x)</code>.</p>
+<p>Compute and return the square root of <em>x</em>.</p>
+<p><strong>Example</strong>:</p>
+<p>sqrt(3) = 1</p>
+<p>sqrt(4) = 2</p>
+<p>sqrt(5) = 2</p>
+<p>sqrt(10) = 3</p>
+<p><strong>Challenge</strong> :O(log(x))</p>
+</blockquote>
+<p>Code is here:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">/**</span><br><span class="line">     * @param x: An integer</span><br><span class="line">     * @return: The sqrt of x</span><br><span class="line">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">sqrt</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// write your code here</span></span><br><span class="line">        <span class="comment">// if (x &lt;= 0) return 0;</span></span><br><span class="line">        <span class="keyword">if</span> (x == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">long</span> begin = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">long</span> end = x;</span><br><span class="line">        <span class="keyword">long</span> mid, lastmid;</span><br><span class="line">        mid = begin + (end - begin) / <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">while</span> (begin + <span class="number">1</span> &lt; end) &#123;</span><br><span class="line">            <span class="keyword">if</span> (mid * mid &lt; x) &#123; begin = mid; mid = mid + (end - begin) / <span class="number">2</span>;&#125;</span><br><span class="line">            <span class="keyword">if</span> (mid * mid &gt; x) &#123; end = mid; mid = begin + (end - begin) / <span class="number">2</span>;&#125;</span><br><span class="line">            <span class="keyword">if</span> (mid * mid == x) <span class="keyword">return</span> mid;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> begin;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Lintcode/">Lintcode</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-记一次JAVA-Debug之旅" class="article article-type-post" itemscope itemprop="blogPost">
   
