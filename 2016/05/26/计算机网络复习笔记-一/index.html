@@ -4,18 +4,18 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>记一次JAVA Debug之旅 | Bigshark yu&#39;s pages</title>
+  <title>计算机网络复习笔记(一) | Bigshark yu&#39;s pages</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="先把代码贴上：1234567891011121314151617181920212223242526272829303132333435363738package Test;import java.util.Scanner;/** * Created by woodizrobin on 16/3/22. * Program Name: woodizrobin * Platform: JDK 1.7">
+  <meta name="description">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记一次JAVA Debug之旅">
-<meta property="og:url" content="http://yoursite.com/2016/03/23/记一次JAVA-Debug之旅/index.html">
+<meta property="og:title" content="计算机网络复习笔记(一)">
+<meta property="og:url" content="http://yoursite.com/2016/05/26/计算机网络复习笔记-一/index.html">
 <meta property="og:site_name" content="Bigshark yu's pages">
-<meta property="og:description" content="先把代码贴上：1234567891011121314151617181920212223242526272829303132333435363738package Test;import java.util.Scanner;/** * Created by woodizrobin on 16/3/22. * Program Name: woodizrobin * Platform: JDK 1.7">
-<meta property="og:updated_time" content="2016-03-23T03:16:43.000Z">
+<meta property="og:description">
+<meta property="og:updated_time" content="2016-05-25T12:28:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记一次JAVA Debug之旅">
-<meta name="twitter:description" content="先把代码贴上：1234567891011121314151617181920212223242526272829303132333435363738package Test;import java.util.Scanner;/** * Created by woodizrobin on 16/3/22. * Program Name: woodizrobin * Platform: JDK 1.7">
+<meta name="twitter:title" content="计算机网络复习笔记(一)">
+<meta name="twitter:description">
   
     <link rel="alternative" href="/atom.xml" title="Bigshark yu&#39;s pages" type="application/atom+xml">
   
@@ -203,11 +203,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-记一次JAVA-Debug之旅" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-计算机网络复习笔记-一" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/03/23/记一次JAVA-Debug之旅/" class="article-date">
-  	<time datetime="2016-03-23T00:10:00.000Z" itemprop="datePublished">2016-03-23</time>
+      <a href="/2016/05/26/计算机网络复习笔记-一/" class="article-date">
+  	<time datetime="2016-05-25T20:27:34.000Z" itemprop="datePublished">2016-05-25</time>
 </a>
     </div>
   
@@ -220,7 +220,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      记一次JAVA Debug之旅
+      计算机网络复习笔记(一)
     </h1>
   
 
@@ -229,7 +229,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Debug/">Debug</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计算机网络/">计算机网络</a></li></ul>
 	</div>
 
         
@@ -240,17 +240,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>先把代码贴上：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> Test;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.Scanner;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span><br><span class="line"> * Created by woodizrobin on 16/3/22.</span><br><span class="line"> * Program Name: woodizrobin</span><br><span class="line"> * Platform: JDK 1.7</span><br><span class="line"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Scanner in = <span class="keyword">new</span> Scanner(System.in);</span><br><span class="line">        <span class="keyword">int</span> N = in.nextInt();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; N; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> M = in.nextInt();</span><br><span class="line">            <span class="keyword">int</span>[] store = <span class="keyword">new</span> <span class="keyword">int</span>[M];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; M; j++) &#123;</span><br><span class="line">                store[j] = in.nextInt();</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> sum = <span class="number">0</span>; <span class="comment">//sum为素数和</span></span><br><span class="line">            <span class="comment">//以下程序负责求出素数和</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k &lt; M; k++) &#123;</span><br><span class="line">                <span class="comment">//依次扫描store[i]，(0 ~ M - 1)，是素数就加到sum上</span></span><br><span class="line">                <span class="keyword">int</span> q = (<span class="keyword">int</span>) Math.sqrt((<span class="keyword">double</span>) store[k]);</span><br><span class="line">                <span class="keyword">boolean</span> flag = <span class="keyword">true</span>;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> l = <span class="number">2</span>; l &lt;= q || store[k] == <span class="number">2</span> || store[k] == <span class="number">3</span>; l++) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (store[k] % l == <span class="number">0</span>) &#123;</span><br><span class="line">                        flag = <span class="keyword">false</span>;</span><br><span class="line">                        <span class="keyword">break</span>;</span><br><span class="line">                    &#125;</span><br><span class="line">                    sum += store[k];</span><br><span class="line">                    flag = <span class="keyword">true</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            System.out.println(sum);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>在做NYOJ中的一题时，从实现初步功能到匹配完全实现中的Debug过程。</p>
-<blockquote>
-<p>题目描述：</p>
-<p>现在给你N个数(0&lt;N&lt;1000)，现在要求你写一个程序，找出这N个数中的所有素数，并求和。</p>
-<p>输入：</p>
-<p>第一行给出整数M(0&lt;M&lt;10)代表多少组测试数据<br>每组测试数据第一行给你N，代表该组测试数据的数量。<br>接下来的N个数为要测试的数据，每个数小于1000</p>
-<p>输出：</p>
-<p>每组测试数据结果占一行，输出给出的测试数据的所有素数和</p>
-</blockquote>
-
+        
       
     </div>
     
@@ -259,18 +249,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/05/21/Lintcode-report-Sqrt-x/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Lintcode-report-Sqrt(x)
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/03/22/结题报告之数素数问题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">解题报告之数素数问题</div>
+    <a href="/2016/05/25/处理器技术扫盲/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">处理器技术扫盲（序）</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -305,7 +286,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="记一次JAVA-Debug之旅" data-title="记一次JAVA Debug之旅" data-url="http://yoursite.com/2016/03/23/记一次JAVA-Debug之旅/"></div>
+	<div class="ds-thread" data-thread-key="计算机网络复习笔记-一" data-title="计算机网络复习笔记(一)" data-url="http://yoursite.com/2016/05/26/计算机网络复习笔记-一/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
