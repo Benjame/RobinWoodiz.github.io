@@ -118,7 +118,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/tags/Java/" style="font-size: 20px;">Java</a> <a href="/tags/Lintcode/" style="font-size: 10px;">Lintcode</a> <a href="/tags/OJ/" style="font-size: 10px;">OJ</a> <a href="/tags/Qt/" style="font-size: 10px;">Qt</a> <a href="/tags/内存/" style="font-size: 20px;">内存</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/数素数/" style="font-size: 10px;">数素数</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/程序设计/" style="font-size: 10px;">程序设计</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/结题报告/" style="font-size: 10px;">结题报告</a> <a href="/tags/解题报告/" style="font-size: 10px;">解题报告</a> <a href="/tags/计算机组成原理/" style="font-size: 20px;">计算机组成原理</a>
+						<a href="/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Lintcode/" style="font-size: 10px;">Lintcode</a> <a href="/tags/OJ/" style="font-size: 10px;">OJ</a> <a href="/tags/Qt/" style="font-size: 10px;">Qt</a> <a href="/tags/内存/" style="font-size: 15px;">内存</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/数素数/" style="font-size: 10px;">数素数</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/程序设计/" style="font-size: 10px;">程序设计</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/结题报告/" style="font-size: 10px;">结题报告</a> <a href="/tags/解题报告/" style="font-size: 10px;">解题报告</a> <a href="/tags/计算机组成原理/" style="font-size: 20px;">计算机组成原理</a>
 					</div>
 				</section>
 				
@@ -203,6 +203,65 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-处理器技术扫盲" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/25/处理器技术扫盲/" class="article-date">
+  	<time datetime="2016-05-25T10:24:30.000Z" itemprop="datePublished">2016-05-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/25/处理器技术扫盲/">处理器技术扫盲</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计算机组成原理/">计算机组成原理</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-Lintcode-report-Sqrt-x" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -792,89 +851,10 @@
 
 
   
-    <article id="post-对内存的思考" class="article article-type-post" itemscope itemprop="blogPost">
   
-    <div class="article-meta">
-      <a href="/2016/02/02/对内存的思考/" class="article-date">
-  	<time datetime="2016-02-02T00:00:18.000Z" itemprop="datePublished">2016-02-02</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/02/对内存的思考/">对内存的思考（一）</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <blockquote>
-<p>伟大的比尔盖茨曾经失言：</p>
-<p>640K ought to be enough for everybody — Bill Gates           1981</p>
-</blockquote>
-<h2 id="u4ECE_u4E00_u5757_u82AF_u7247_u8BF4_u8D77_u2014Intel_80x86_u7CFB_u5217"><a href="#u4ECE_u4E00_u5757_u82AF_u7247_u8BF4_u8D77_u2014Intel_80x86_u7CFB_u5217" class="headerlink" title="从一块芯片说起—Intel 80x86系列"></a>从一块芯片说起—Intel 80x86系列</h2><p>现代的Intel处理器可以追溯到最早期的Intel芯片。随着顾客对芯片的使用越来越复杂，从单纯的计算器到统计、制表、游戏，他们对芯片的要求也越来越高。1978年中Intel推出第一款16位微处理器<code>Intel 8086</code>,随后于1979年推出8088。这是一款划时代意义的处理器，它采用16位数据总线，20位外部总线，物理寻址空间达到1M。注意8086的数据总线与外部地址总线数目并不相同即内部数据总线传输的16位数据只能表示$2^{16}$个字节（Byte），而外部地址总线传输20位数据则可表示$2^{20}$个字节（Byte），即微处理器中单独一个<code>字</code>（16位，2字节），不能表示所有的地址空间，Intel为了解决这个问题发明了分段机制。</p>
-<p><img src="http://7xqoad.com1.z0.glb.clouddn.com/%E5%86%85%E5%AD%98640px-KL_Intel_D8086.jpg" alt="8086处理器"></p>
-<blockquote>
-<p>8086的封装采用40引脚的双列直插（dual in-line），数据总线与地址总线复用了前16个引脚。16位的I/O地址，因此独立的I/O寻址空间为64KiB (即216 = 65536).由于8086内部的地址寄存器是16 位宽，因而最大线性寻址空间为64 KB。使用超过64 KB内存空间的程序设计时，需要调整段寄存器（segment registers）。即段寄存器保存段编号，而段寄存器也是16位，当计算物理地址时将段寄存器中的值向左移4位然后与16位偏移量（offset）相加得到实际的20位物理地址。这种机制保证微处理器对存储器的充分寻址。</p>
-</blockquote>
-<p><img src="http://7xqoad.com1.z0.glb.clouddn.com/%E5%86%85%E5%AD%98Wyprowadzenie_mikroprocesora_8086.jpeg" alt="8086引脚"></p>
-<p>8086微处理器被搭载在IBM 成功的个人电脑IBM PC XT上，随着上世纪80年代PC机的浪潮，8086为Intel最为成功的微处理器之一，不仅销量大同时伴随着因此而产生的各类软件系统。其中就有一个鼎鼎有名的软件——Microsoft Disk Operating System（MS DOS）。</p>
-<p>既然采用了这个基本的地址模型，后续的80x86处理器不得不延续这种做法，否则就会导致不兼容。我们无法知道IBM在1979年选择Intel 8088（一种与8086同代的处理器）作为它新开发的PC的处理器的确切原因，毕竟从技术上说，当时有许多公司可以提供更为出色的方案，如Motorola和National Semiconductor。由于选择了Intel的芯片，IBM帮助Intel在接下来的数十年里财源滚滚，就像IBM选择了Microsoft的MS-DOS作为PC的操作系统从而使Microsoft飞黄腾达一样。</p>
-<p>用于最初的IBM PC的8088处理器只是8086的廉价版本，它允许当时大量存在的支持8位的芯片继续使用。此后对80x86处理器的升级都体现在“更小、更快、更便宜以及更多指令”上，例如80186增加了10条并不是很重要的指令。<strong>80286差不多就是80186（内置了一些外设端口支持），但它第一次试图扩展内存地址空间。他把内存控制器移到处理器外部，并提供了一种野心勃勃的内存模式，称为<code>虚拟模式</code>。</strong> <em>在虚拟模式中，段寄存器不在于偏移地址相加，而是作为一个存放实际段地址的表提供索引。这种地址模式也成为保护模式（protected mode） ，它依然是16位的。MS-Windows就使用286的保护模式作为它的标准地址模式。</em>这些处理器卖的并没有8086系列成功，直到1985年Intel推出Intel 80386处理器。80386在80286的基础上增加了2种新的地址模式：32位的保护模式和虚拟的8086模式。Microsoft的旗舰产品Windows NT操作系统（Windows 10就属于Windows NT 10.0）和增强模式下的Windows都采用了32位的保护模式。而另一种内存模式，虚拟的8086模式则可以创建一种内存空间为1MB的8086虚拟机。几个虚拟机可以同时运行从而支持MS-DOS的虚拟多任务系统。</p>
-<p><img src="http://7xqoad.com1.z0.glb.clouddn.com/%E5%86%85%E5%AD%98KU80386SLB1A-25-a.jpg" alt="80386微处理器"></p>
-<h2 id="Intel_80x86_u5185_u5B58_u6A21_u578B_u4EE5_u53CA_u5B83_u7684_u5DE5_u4F5C_u539F_u7406"><a href="#Intel_80x86_u5185_u5B58_u6A21_u578B_u4EE5_u53CA_u5B83_u7684_u5DE5_u4F5C_u539F_u7406" class="headerlink" title="Intel 80x86内存模型以及它的工作原理"></a>Intel 80x86内存模型以及它的工作原理</h2><p>在Intel 80x86内存模型中，段是内存模型设计的结果，在80x86的内存模型中，各处理器的地址空间并不相同，但它们都被分割成以<code>64KB</code>为单位的区域，每个这样的区域就被称为<code>段</code>。8086中的段是一块64KB的内存区域，由一个段寄存器所指向。内存地址的形成：取得段寄存器的值，左移4位（相当于乘上16），然后与16位的偏移地址（它表示段内的地址）相加就得到20位的最终地址。</p>
-<h3 id="MS-DOS_u7684640K_u9650_u5236_u7F18_u4F55_u800C_u6765"><a href="#MS-DOS_u7684640K_u9650_u5236_u7F18_u4F55_u800C_u6765" class="headerlink" title="MS-DOS的640K限制缘何而来"></a>MS-DOS的640K限制缘何而来</h3><blockquote>
-<p>在MS-DOS下运行的应用程序都会面临一个严峻的内存限制，那就是可用内存只有640KB。这个限制源于Intel 8086这个最初的DOS机器的最大地址范围。8086支持1MB的内存。之所以只能使用640KB是因为某些段（每个64KB）必须予以保留，供系统所用。</p>
-</blockquote>
-<p>段                                                     保存用于</p>
-<p>F0000到FFFFF                    64KB，永久性的ROM区域BIOS、诊断信息</p>
-<p>D0000到EFFFF                    128KB，用于ROM存储区域</p>
-<p>C0000到CFFFF                    64KB，用于BIOS扩展</p>
-<p>B0000到BFFFF                    64KB，用于常规性的内存显示</p>
-<p>A0000到AFFFF                    64KB，用于显示内存扩展</p>
-<p>其余                            </p>
-<p>00000到9FFFF                        640KB，用于应用程序</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内存/">内存</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计算机组成原理/">计算机组成原理</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-  
+    <nav id="page-nav">
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+    </nav>
   
 </div>
       <footer id="footer">
