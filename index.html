@@ -231,9 +231,9 @@
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
-<p>最近在看<code>操作系统</code>，对<code>操作系统</code>的认识是建立在对硬件的一个基本面了解上的，而计算机的硬件核心基本集中在微处理器这块。故对<code>微处理器</code>的认识就很有必要了，说到<code>微处理器</code>，讲得比较详细的应该是<a href="https://book.douban.com/subject/4872461/" target="_blank" rel="external">《intel微处理器》</a>（基本上就是加强版的微机原理=_=||）。如果大家有兴趣可以买这本书拜读一下，再进一步可以看看<a href="http://www.intel.cn/content/www/cn/zh/processors/architectures-software-developer-manuals.html" target="_blank" rel="external">intel 64 和IA-32架构软件开发人员手册</a>。一共<code>几千页</code>。打发时间良品。(⊙v⊙)嗯。这里只是简单介绍一下处理器基本面，心中有个大方向感觉，至于这个面上的一坨坨的详细知识点大家就去看我上面说的书和资料吧。</p>
+<p>最近在看<code>操作系统</code>，对<code>操作系统</code>的认识是建立在对硬件的一个基本面了解上的，而计算机的硬件核心基本集中在微处理器这块。故对<code>微处理器</code>的认识就很有必要了，说到<code>微处理器</code>，讲得比较详细的应该是<a href="https://book.douban.com/subject/4872461/" target="_blank" rel="external">《intel微处理器》</a>（基本上就是加强版的微机原理=_=||）。如果大家有兴趣可以买这本书拜读一下，再进一步可以看看<a href="http://www.intel.cn/content/www/cn/zh/processors/architectures-software-developer-manuals.html" target="_blank" rel="external">intel 64 和IA-32架构软件开发人员手册</a>，好几卷，<code>几千页</code>。打发时间良品。(⊙v⊙)嗯。这里只是简单介绍一下处理器基本面，心中有个大方向感觉，至于这个面上的一坨坨的详细知识点大家就去看我上面说的书和资料吧。</p>
 </blockquote>
-<h3 id="u8BA1_u7B97_u673A_u57FA_u672C_u7ED3_u6784"><a href="#u8BA1_u7B97_u673A_u57FA_u672C_u7ED3_u6784" class="headerlink" title="计算机基本结构"></a>计算机基本结构</h3><h4 id="u51AF_u8BFA_u4F9D_u66FC_u7684_u8BA1_u7B97_u673A_u7ED3_u6784_u7531_u4E94_u90E8_u5206_uFF1A"><a href="#u51AF_u8BFA_u4F9D_u66FC_u7684_u8BA1_u7B97_u673A_u7ED3_u6784_u7531_u4E94_u90E8_u5206_uFF1A" class="headerlink" title="冯诺依曼的计算机结构由五部分："></a>冯诺依曼的计算机结构由五部分：</h4><ul>
+<h3 id="u8BA1_u7B97_u673A_u57FA_u672C_u7ED3_u6784"><a href="#u8BA1_u7B97_u673A_u57FA_u672C_u7ED3_u6784" class="headerlink" title="计算机基本结构"></a>计算机基本结构</h3><h4 id="u51AF_u8BFA_u4F9D_u66FC_u7ED3_u6784_uFF1A"><a href="#u51AF_u8BFA_u4F9D_u66FC_u7ED3_u6784_uFF1A" class="headerlink" title="冯诺依曼结构："></a>冯诺依曼结构：</h4><ul>
 <li>运算器（CA）</li>
 <li>控制器（CC）</li>
 <li>存储器（M）</li>
@@ -243,7 +243,16 @@
 <p><img src="http://7xqoad.com1.z0.glb.clouddn.com/%E5%A4%84%E7%90%86%E5%99%A8%E6%89%AB%E7%9B%B2%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-25%20%E4%B8%8B%E5%8D%884.24.50.png" alt="抽象结构"></p>
 <p>其实这个模型可以再简化一下：</p>
 <p><img src="http://7xqoad.com1.z0.glb.clouddn.com/%E5%A4%84%E7%90%86%E5%99%A8%E6%89%AB%E7%9B%B2%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AE%80%E5%8C%96%E6%8A%BD%E8%B1%A1%E5%9B%BE.png" alt="抽象简图"></p>
-
+<p>把<code>运算器</code>，<code>控制器</code>合并，称为处理器。也就是说对于我们来说一台计算设备最重要的就是<code>处理器</code>，<code>内存</code>，<code>输入输出设备</code>这三样(其实输入输出设备有好多)，也就是说lz搞来一台机子，想跑程序（比如玩lol）只要有处理器、内存、输入输出设备（比如键盘，鼠标，显示器）就够了，至于磁盘是森么，只要不断电、内存够大也是可以的嘛😊。</p>
+<p>​    我们把程序和数据存在内存上，处理器负责从内存上读指令、取数据-&gt;执行指令，计算数据-&gt;写回内存。然后适当的时候把结果给输出设备，让输出设备显示结果。（比如显示lol界面）或者从输入设备获取命令，比如lol时我们需要不停地撸鼠标，让俺们的英雄走走位。其实计算机总概来说就这些，其它都是这些玩意的细节。</p>
+<h3 id="u540D_u8BCD_u89E3_u91CA"><a href="#u540D_u8BCD_u89E3_u91CA" class="headerlink" title="名词解释"></a>名词解释</h3><p>我们知道了处理器唯一干的工作就是执行指令，所有的操作都是执行指令的结果，我们先来看看处理器是如何执行指令的：</p>
+<p>① 指令读取（IF:Instruction Fetch）</p>
+<p>② 指令译码（DE:Decode）</p>
+<p>③ 取出计算数据（操作数）（OP:Operand Fetch）</p>
+<p>④ 计算 （EX:Execution）</p>
+<p>⑤ 写回计算结果（WB:Write Back）</p>
+<p>也就是处理器执行一条指令（一般来说）需要5个步骤（①~⑤）。</p>
+<h6 id="u5468_u671F_u65F6_u95F4_uFF1A_u5728_u4E0A_u4F8B_u4E2D_u8FDB_u884C_u2460_7E_u2464_u7684_u5DE5_u4F5C_u6240_u9700_u8981_u7684_u65F6_u95F4_u79F0_u4E3A_u5904_u7406_u5668_u7684_u5468_u671F_u65F6_u95F4_uFF08Cycle_Time_uFF09_u3002_u5468_u671F_u65F6_u95F4_u7684_u5012_u6570_u2014_u2014_u4E00_u79D2_u949F_u80FD_u8FDB_u884C_u7684_u5DE5_u4F5C_u6B21_u6570_u79F0_u4E3A_u65F6_u949F_u9891_u7387_u3002"><a href="#u5468_u671F_u65F6_u95F4_uFF1A_u5728_u4E0A_u4F8B_u4E2D_u8FDB_u884C_u2460_7E_u2464_u7684_u5DE5_u4F5C_u6240_u9700_u8981_u7684_u65F6_u95F4_u79F0_u4E3A_u5904_u7406_u5668_u7684_u5468_u671F_u65F6_u95F4_uFF08Cycle_Time_uFF09_u3002_u5468_u671F_u65F6_u95F4_u7684_u5012_u6570_u2014_u2014_u4E00_u79D2_u949F_u80FD_u8FDB_u884C_u7684_u5DE5_u4F5C_u6B21_u6570_u79F0_u4E3A_u65F6_u949F_u9891_u7387_u3002" class="headerlink" title="周期时间：在上例中进行①~⑤的工作所需要的时间称为处理器的周期时间（Cycle Time）。周期时间的倒数——一秒钟能进行的工作次数称为时钟频率。"></a>周期时间：在上例中进行①~⑤的工作所需要的时间称为处理器的<code>周期时间</code>（Cycle Time）。周期时间的倒数——一秒钟能进行的工作次数称为<code>时钟频率</code>。</h6>
       
     </div>
     
