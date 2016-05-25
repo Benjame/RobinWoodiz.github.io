@@ -14,7 +14,7 @@
 <meta property="og:description" content="最近在看操作系统，对操作系统的认识是建立在对硬件的一个基本面了解上的，而计算机的硬件核心基本集中在微处理器这块。故对微处理器的认识就很有必要了，说到微处理器，讲得比较详细的应该是《intel微处理器》（基本上就是加强版的微机原理=_=||）。如果大家有兴趣可以买这本书拜读一下，再进一步可以看看intel 64 和IA-32架构软件开发人员手册，好几卷，几千页。打发时间良品。(⊙v⊙)嗯。这里只是简">
 <meta property="og:image" content="http://7xqoad.com1.z0.glb.clouddn.com/%E5%A4%84%E7%90%86%E5%99%A8%E6%89%AB%E7%9B%B2%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-25%20%E4%B8%8B%E5%8D%884.24.50.png">
 <meta property="og:image" content="http://7xqoad.com1.z0.glb.clouddn.com/%E5%A4%84%E7%90%86%E5%99%A8%E6%89%AB%E7%9B%B2%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AE%80%E5%8C%96%E6%8A%BD%E8%B1%A1%E5%9B%BE.png">
-<meta property="og:updated_time" content="2016-05-25T09:12:03.000Z">
+<meta property="og:updated_time" content="2016-05-25T09:18:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="处理器技术扫盲">
 <meta name="twitter:description" content="最近在看操作系统，对操作系统的认识是建立在对硬件的一个基本面了解上的，而计算机的硬件核心基本集中在微处理器这块。故对微处理器的认识就很有必要了，说到微处理器，讲得比较详细的应该是《intel微处理器》（基本上就是加强版的微机原理=_=||）。如果大家有兴趣可以买这本书拜读一下，再进一步可以看看intel 64 和IA-32架构软件开发人员手册，好几卷，几千页。打发时间良品。(⊙v⊙)嗯。这里只是简">
@@ -257,14 +257,16 @@
 <p><img src="http://7xqoad.com1.z0.glb.clouddn.com/%E5%A4%84%E7%90%86%E5%99%A8%E6%89%AB%E7%9B%B2%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AE%80%E5%8C%96%E6%8A%BD%E8%B1%A1%E5%9B%BE.png" alt="抽象简图"></p>
 <p>把<code>运算器</code>，<code>控制器</code>合并，称为处理器。也就是说对于我们来说一台计算设备最重要的就是<code>处理器</code>，<code>内存</code>，<code>输入输出设备</code>这三样(其实输入输出设备有好多)，也就是说lz搞来一台机子，想跑程序（比如玩lol）只要有处理器、内存、输入输出设备（比如键盘，鼠标，显示器）就够了，至于磁盘是森么，只要不断电、内存够大也是可以的嘛😊。</p>
 <p>​    我们把程序和数据存在内存上，处理器负责从内存上读指令、取数据-&gt;执行指令，计算数据-&gt;写回内存。然后适当的时候把结果给输出设备，让输出设备显示结果。（比如显示lol界面）或者从输入设备获取命令，比如lol时我们需要不停地撸鼠标，让俺们的英雄走走位。其实计算机总概来说就这些，其它都是这些玩意的细节。</p>
-<h3 id="u540D_u8BCD_u89E3_u91CA"><a href="#u540D_u8BCD_u89E3_u91CA" class="headerlink" title="名词解释"></a>名词解释</h3><p>我们知道了处理器唯一干的工作就是执行指令，所有的操作都是执行指令的结果，我们先来看看处理器是如何执行指令的：</p>
+<h3 id="u540D_u8BCD_u89E3_u91CA"><a href="#u540D_u8BCD_u89E3_u91CA" class="headerlink" title="名词解释"></a>名词解释</h3><h4 id="u5904_u7406_u5668_u6267_u884C_u6307_u4EE4"><a href="#u5904_u7406_u5668_u6267_u884C_u6307_u4EE4" class="headerlink" title="处理器执行指令"></a>处理器执行指令</h4><p>我们知道了处理器唯一干的工作就是执行指令，所有的操作都是执行指令的结果，我们先来看看处理器是如何执行指令的：</p>
 <p>① 指令读取（IF:Instruction Fetch）</p>
 <p>② 指令译码（DE:Decode）</p>
 <p>③ 取出计算数据（操作数）（OP:Operand Fetch）</p>
 <p>④ 计算 （EX:Execution）</p>
 <p>⑤ 写回计算结果（WB:Write Back）</p>
 <p>也就是处理器执行一条指令（一般来说）需要5个步骤（①~⑤）。</p>
-<h6 id="u5468_u671F_u65F6_u95F4_uFF1A_u5728_u4E0A_u4F8B_u4E2D_u8FDB_u884C_u2460_7E_u2464_u7684_u5DE5_u4F5C_u6240_u9700_u8981_u7684_u65F6_u95F4_u79F0_u4E3A_u5904_u7406_u5668_u7684_u5468_u671F_u65F6_u95F4_uFF08Cycle_Time_uFF09_u3002_u5468_u671F_u65F6_u95F4_u7684_u5012_u6570_u2014_u2014_u4E00_u79D2_u949F_u80FD_u8FDB_u884C_u7684_u5DE5_u4F5C_u6B21_u6570_u79F0_u4E3A_u65F6_u949F_u9891_u7387_u3002"><a href="#u5468_u671F_u65F6_u95F4_uFF1A_u5728_u4E0A_u4F8B_u4E2D_u8FDB_u884C_u2460_7E_u2464_u7684_u5DE5_u4F5C_u6240_u9700_u8981_u7684_u65F6_u95F4_u79F0_u4E3A_u5904_u7406_u5668_u7684_u5468_u671F_u65F6_u95F4_uFF08Cycle_Time_uFF09_u3002_u5468_u671F_u65F6_u95F4_u7684_u5012_u6570_u2014_u2014_u4E00_u79D2_u949F_u80FD_u8FDB_u884C_u7684_u5DE5_u4F5C_u6B21_u6570_u79F0_u4E3A_u65F6_u949F_u9891_u7387_u3002" class="headerlink" title="周期时间：在上例中进行①~⑤的工作所需要的时间称为处理器的周期时间（Cycle Time）。周期时间的倒数——一秒钟能进行的工作次数称为时钟频率。"></a>周期时间：在上例中进行①~⑤的工作所需要的时间称为处理器的<code>周期时间</code>（Cycle Time）。周期时间的倒数——一秒钟能进行的工作次数称为<code>时钟频率</code>。</h6>
+<h6 id="u5468_u671F_u65F6_u95F4_uFF1A_u5728_u4E0A_u4F8B_u4E2D_u8FDB_u884C_u2460_7E_u2464_u7684_u5DE5_u4F5C_u6240_u9700_u8981_u7684_u65F6_u95F4_u79F0_u4E3A_u5904_u7406_u5668_u7684_u5468_u671F_u65F6_u95F4_uFF08Cycle_Time_uFF09_u3002_u5468_u671F_u65F6_u95F4_u7684_u5012_u6570_u2014_u2014_u4E00_u79D2_u949F_u80FD_u8FDB_u884C_u7684_u5DE5_u4F5C_u6B21_u6570_u79F0_u4E3A_u65F6_u949F_u9891_u7387_u3002"><a href="#u5468_u671F_u65F6_u95F4_uFF1A_u5728_u4E0A_u4F8B_u4E2D_u8FDB_u884C_u2460_7E_u2464_u7684_u5DE5_u4F5C_u6240_u9700_u8981_u7684_u65F6_u95F4_u79F0_u4E3A_u5904_u7406_u5668_u7684_u5468_u671F_u65F6_u95F4_uFF08Cycle_Time_uFF09_u3002_u5468_u671F_u65F6_u95F4_u7684_u5012_u6570_u2014_u2014_u4E00_u79D2_u949F_u80FD_u8FDB_u884C_u7684_u5DE5_u4F5C_u6B21_u6570_u79F0_u4E3A_u65F6_u949F_u9891_u7387_u3002" class="headerlink" title="周期时间：在上例中进行①~⑤的工作所需要的时间称为处理器的周期时间（Cycle Time）。周期时间的倒数——一秒钟能进行的工作次数称为时钟频率。"></a>周期时间：在上例中进行①~⑤的工作所需要的时间称为处理器的<code>周期时间</code>（Cycle Time）。周期时间的倒数——一秒钟能进行的工作次数称为<code>时钟频率</code>。</h6><p>时钟频率越高处理器的周期时间越短，也就是说我们能够在较短的时间内处理指令，性能就越高。不过影响处理器性能的因素除了时钟频率之外还有很多，因此在比较两款设计比较迥异的处理器的时候不能只看时钟频率，还有微架构也很重要。</p>
+<h4 id="u5185_u5B58_u7684_u90A3_u70B9_u4E8B"><a href="#u5185_u5B58_u7684_u90A3_u70B9_u4E8B" class="headerlink" title="内存的那点事"></a>内存的那点事</h4><p>功能一句话！：<code>内存可以存储写入的信息，并根据需要读出存储的内容。</code></p>
+
       
     </div>
     
