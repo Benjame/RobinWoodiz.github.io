@@ -15,7 +15,9 @@
 <meta property="og:image" content="http://7xqoad.com1.z0.glb.clouddn.com/%E5%A4%84%E7%90%86%E5%99%A8%E6%89%AB%E7%9B%B2%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-25%20%E4%B8%8B%E5%8D%884.24.50.png">
 <meta property="og:image" content="http://7xqoad.com1.z0.glb.clouddn.com/%E5%A4%84%E7%90%86%E5%99%A8%E6%89%AB%E7%9B%B2%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%AE%80%E5%8C%96%E6%8A%BD%E8%B1%A1%E5%9B%BE.png">
 <meta property="og:image" content="http://7xqoad.com1.z0.glb.clouddn.com/%E5%A4%84%E7%90%86%E5%99%A8%E6%89%AB%E7%9B%B2PCIExpress.jpg">
-<meta property="og:updated_time" content="2016-05-25T09:48:44.000Z">
+<meta property="og:image" content="http://7xqoad.com1.z0.glb.clouddn.com/%E5%A4%84%E7%90%86%E5%99%A8%E6%89%AB%E7%9B%B2%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-25%20%E4%B8%8B%E5%8D%885.50.38.png">
+<meta property="og:image" content="http://7xqoad.com1.z0.glb.clouddn.com/%E5%A4%84%E7%90%86%E5%99%A8%E6%89%AB%E7%9B%B2pci_top_arch.png">
+<meta property="og:updated_time" content="2016-05-25T09:59:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="处理器技术扫盲（一）">
 <meta name="twitter:description" content="最近在看操作系统，对操作系统的认识是建立在对硬件的一个基本面了解上的，而计算机的硬件核心基本集中在微处理器这块。故对微处理器的认识就很有必要了，说到微处理器，讲得比较详细的应该是《intel微处理器》（基本上就是加强版的微机原理=_=||）。如果大家有兴趣可以买这本书拜读一下，再进一步可以看看intel 64 和IA-32架构软件开发人员手册，好几卷，几千页。打发时间良品。(⊙v⊙)嗯。这里只是简">
@@ -292,6 +294,11 @@
 <blockquote>
 <p><strong>PCI Express</strong>，简称<strong>PCI-E</strong>，是<a href="https://zh.wikipedia.org/wiki/%E9%9B%BB%E8%85%A6%E5%8C%AF%E6%B5%81%E6%8E%92" target="_blank" rel="external">电脑总线</a><a href="https://zh.wikipedia.org/wiki/%E5%A4%96%E8%AE%BE%E7%BB%84%E4%BB%B6%E4%BA%92%E8%BF%9E%E6%A0%87%E5%87%86" target="_blank" rel="external">PCI</a>的一种，它沿用了现有的PCI<a href="https://zh.wikipedia.org/wiki/%E7%B7%A8%E7%A8%8B" target="_blank" rel="external">编程</a>概念及<a href="https://zh.wikipedia.org/wiki/%E9%80%9A%E8%A8%8A" target="_blank" rel="external">通讯</a><a href="https://zh.wikipedia.org/wiki/%E6%A0%87%E5%87%86" target="_blank" rel="external">标准</a>，但建基于更快的<a href="https://zh.wikipedia.org/wiki/%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1" target="_blank" rel="external">串行通信</a>系统。<a href="https://zh.wikipedia.org/wiki/%E8%8B%B1%E7%89%B9%E7%88%BE" target="_blank" rel="external">英特尔</a>是该接口的主要支持者。PCIe仅应用于内部互连。由于PCIe是基于现有的<a href="https://zh.wikipedia.org/wiki/%E5%A4%96%E8%AE%BE%E7%BB%84%E4%BB%B6%E4%BA%92%E8%BF%9E%E6%A0%87%E5%87%86" target="_blank" rel="external">PCI</a>系统，只需修改<a href="https://zh.wikipedia.org/wiki/%E7%89%A9%E7%90%86%E5%B1%82" target="_blank" rel="external">物理层</a>而无须修改软件就可将现有PCI系统转换为PCIe。PCIe拥有更快的速率，以替换几乎全部现有的内部<a href="https://zh.wikipedia.org/wiki/%E6%80%BB%E7%BA%BF" target="_blank" rel="external">总线</a>（包括<a href="https://zh.wikipedia.org/wiki/AGP" target="_blank" rel="external">AGP</a>和<a href="https://zh.wikipedia.org/wiki/%E5%A4%96%E8%AE%BE%E7%BB%84%E4%BB%B6%E4%BA%92%E8%BF%9E%E6%A0%87%E5%87%86" target="_blank" rel="external">PCI</a>）。<a href="https://zh.wikipedia.org/wiki/%E8%8B%B1%E7%89%B9%E7%88%BE" target="_blank" rel="external">英特尔</a>希望将来能用一个PCIe控制器和所有外部设备交流，替换现有的<a href="https://zh.wikipedia.org/wiki/%E5%8D%97%E6%A1%A5" target="_blank" rel="external">南桥</a>／<a href="https://zh.wikipedia.org/wiki/%E5%8C%97%E6%A1%A5" target="_blank" rel="external">北桥</a>方案。</p>
 </blockquote>
+<p>以下几代PCIe总线参数比较：</p>
+<p><img src="http://7xqoad.com1.z0.glb.clouddn.com/%E5%A4%84%E7%90%86%E5%99%A8%E6%89%AB%E7%9B%B2%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202016-05-25%20%E4%B8%8B%E5%8D%885.50.38.png" alt="参数"></p>
+<p>好！有个总线，我们终于可以建立起CPU、内存、输入输出设备之间的联系啦！以下：</p>
+<p><img src="http://7xqoad.com1.z0.glb.clouddn.com/%E5%A4%84%E7%90%86%E5%99%A8%E6%89%AB%E7%9B%B2pci_top_arch.png" alt=""></p>
+<p>从上可以看出PCIe串起了网卡、SCSI磁盘、显卡、声卡、内存还有CPU cache。CPU通过PCIe协议完成与其它设备的各种交互。</p>
 
       
     </div>
