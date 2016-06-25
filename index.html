@@ -118,7 +118,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Lintcode/" style="font-size: 10px;">Lintcode</a> <a href="/tags/OJ/" style="font-size: 10px;">OJ</a> <a href="/tags/Qt/" style="font-size: 10px;">Qt</a> <a href="/tags/内存/" style="font-size: 15px;">内存</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/数素数/" style="font-size: 10px;">数素数</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/程序设计/" style="font-size: 10px;">程序设计</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/结题报告/" style="font-size: 10px;">结题报告</a> <a href="/tags/解题报告/" style="font-size: 10px;">解题报告</a> <a href="/tags/计算机组成原理/" style="font-size: 20px;">计算机组成原理</a> <a href="/tags/计算机网络/" style="font-size: 10px;">计算机网络</a>
+						<a href="/tags/Cpp-测试/" style="font-size: 10px;">Cpp 测试</a> <a href="/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Lintcode/" style="font-size: 10px;">Lintcode</a> <a href="/tags/OJ/" style="font-size: 10px;">OJ</a> <a href="/tags/Qt/" style="font-size: 10px;">Qt</a> <a href="/tags/内存/" style="font-size: 15px;">内存</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/数素数/" style="font-size: 10px;">数素数</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/程序设计/" style="font-size: 10px;">程序设计</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/结题报告/" style="font-size: 10px;">结题报告</a> <a href="/tags/解题报告/" style="font-size: 10px;">解题报告</a> <a href="/tags/计算机组成原理/" style="font-size: 20px;">计算机组成原理</a> <a href="/tags/计算机网络/" style="font-size: 10px;">计算机网络</a>
 					</div>
 				</section>
 				
@@ -203,6 +203,105 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-介绍一个C-测试框架" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/06/26/介绍一个C-测试框架/" class="article-date">
+  	<time datetime="2016-06-25T23:02:29.000Z" itemprop="datePublished">2016-06-25</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/06/26/介绍一个C-测试框架/">介绍一个C++测试框架—Catch</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/" alt="Catch"></p>
+<h3 id="What_is_the_Catch_3F"><a href="#What_is_the_Catch_3F" class="headerlink" title="What is the Catch?"></a>What is the Catch?</h3><p>什么是Catch？</p>
+<p>Catch stands for C++ Automated Test Cases in Headers and is a multi-paradigm automated test framework for C++ and Objective-C (and, maybe, C). It is implemented entirely in a set of header files, but is packaged up as a single header for extra convenience.</p>
+<blockquote>
+<p>Catch 代表 <code>C++ Automated Test Case in Headers</code>，一种针对C++、Objective-C（并且或许C）多范例自动测试框架。它完全由一系列头文件实现，但为了额外的方便包装成一个单独的头文件。</p>
+</blockquote>
+<h3 id="Key_Features"><a href="#Key_Features" class="headerlink" title="Key Features"></a>Key Features</h3><ul>
+<li>Really easy to get started. Just download catch.hpp, #include it and you’re away.</li>
+</ul>
+<blockquote>
+<p>容易学习，仅需下载catch.hpp头文件，把它#inlcude进来即可。</p>
+</blockquote>
+<ul>
+<li>No external dependencies. As long as you can compile C++98 and have a C++ standard library available.</li>
+</ul>
+<blockquote>
+<p>没有外部依赖，只要你能编译C++ 98代码并且带有C++标准库即可。</p>
+</blockquote>
+<ul>
+<li>Write test cases as, self-registering, functions or methods.</li>
+</ul>
+<blockquote>
+<p>写测试用例，自动注册，函数或方法。</p>
+</blockquote>
+<ul>
+<li>Divide test cases into sections, each of which is run in isolation (eliminates the need for fixtures!)</li>
+</ul>
+<blockquote>
+<p>以section的形式分离测试用例，每个分别隔离运行。（排除混合的需要！）</p>
+</blockquote>
+<ul>
+<li>Use BDD-style Given-When-Then sections as well as traditional unit test cases.</li>
+</ul>
+<blockquote>
+<p>使用BDD-style Given-When-Then section段 同时也使用传统的单元测试用例。</p>
+</blockquote>
+<ul>
+<li>Only one core assertion macro for comparisons. Standard C/C++ operators are used for the comparison - yet the full expression is decomposed and lhs and rhs values are logged.</li>
+</ul>
+<blockquote>
+<p>只有一个核心assertion断言宏用来比较。标准C/C++操作符被用来比较，目前完整的表达式被分解，lhs和rhs值被记入日志。</p>
+</blockquote>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cpp-测试/">Cpp 测试</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-计算机网络复习笔记-一" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -818,63 +917,6 @@
       
 	<div class="article-tag tagcloud">
 		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/内存/">内存</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/程序设计/">程序设计</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/计算机组成原理/">计算机组成原理</a></li></ul>
-	</div>
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-常用排序算法大点兵" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/02/02/常用排序算法大点兵/" class="article-date">
-  	<time datetime="2016-02-02T03:30:23.000Z" itemprop="datePublished">2016-02-02</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/02/常用排序算法大点兵/">常用排序算法大点兵</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
 	</div>
 
       

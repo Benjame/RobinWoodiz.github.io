@@ -4,17 +4,22 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Tag: 算法 | Bigshark yu&#39;s pages</title>
+  <title>介绍一个C++测试框架—Catch | Bigshark yu&#39;s pages</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bigshark yu's pages">
-<meta property="og:url" content="http://yoursite.com/tags/算法/index.html">
+  <meta name="description" content="What is the Catch?什么是Catch？
+Catch stands for C++ Automated Test Cases in Headers and is a multi-paradigm automated test framework for C++ and Objective-C (and, maybe, C). It is implemented entirely in">
+<meta property="og:type" content="article">
+<meta property="og:title" content="介绍一个C++测试框架—Catch">
+<meta property="og:url" content="http://yoursite.com/2016/06/26/介绍一个C-测试框架/index.html">
 <meta property="og:site_name" content="Bigshark yu's pages">
-<meta property="og:description">
+<meta property="og:description" content="What is the Catch?什么是Catch？
+Catch stands for C++ Automated Test Cases in Headers and is a multi-paradigm automated test framework for C++ and Objective-C (and, maybe, C). It is implemented entirely in">
+<meta property="og:image" content="http://yoursite.com/">
+<meta property="og:updated_time" content="2016-06-25T15:23:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Bigshark yu's pages">
-<meta name="twitter:description">
+<meta name="twitter:title" content="介绍一个C++测试框架—Catch">
+<meta name="twitter:description" content="What is the Catch?什么是Catch？
+Catch stands for C++ Automated Test Cases in Headers and is a multi-paradigm automated test framework for C++ and Objective-C (and, maybe, C). It is implemented entirely in">
   
     <link rel="alternative" href="/atom.xml" title="Bigshark yu&#39;s pages" type="application/atom+xml">
   
@@ -202,53 +207,151 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-介绍一个C-测试框架" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2016" class="archive-year">2016</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2016/02/02/常用排序算法大点兵/" class="archive-article-date">
-  	<time datetime="2016-02-02T03:30:23.000Z" itemprop="datePublished">Feb 2</time>
+    <div class="article-meta">
+      <a href="/2016/06/26/介绍一个C-测试框架/" class="article-date">
+  	<time datetime="2016-06-25T23:02:29.000Z" itemprop="datePublished">2016-06-25</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2016/02/02/常用排序算法大点兵/">常用排序算法大点兵</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      介绍一个C++测试框架—Catch
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/算法/">算法</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Cpp-测试/">Cpp 测试</a></li></ul>
 	</div>
 
-          
+        
 
-        </div>
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><img src="/" alt="Catch"></p>
+<h3 id="What_is_the_Catch_3F"><a href="#What_is_the_Catch_3F" class="headerlink" title="What is the Catch?"></a>What is the Catch?</h3><p>什么是Catch？</p>
+<p>Catch stands for C++ Automated Test Cases in Headers and is a multi-paradigm automated test framework for C++ and Objective-C (and, maybe, C). It is implemented entirely in a set of header files, but is packaged up as a single header for extra convenience.</p>
+<blockquote>
+<p>Catch 代表 <code>C++ Automated Test Case in Headers</code>，一种针对C++、Objective-C（并且或许C）多范例自动测试框架。它完全由一系列头文件实现，但为了额外的方便包装成一个单独的头文件。</p>
+</blockquote>
+<h3 id="Key_Features"><a href="#Key_Features" class="headerlink" title="Key Features"></a>Key Features</h3><ul>
+<li>Really easy to get started. Just download catch.hpp, #include it and you’re away.</li>
+</ul>
+<blockquote>
+<p>容易学习，仅需下载catch.hpp头文件，把它#inlcude进来即可。</p>
+</blockquote>
+<ul>
+<li>No external dependencies. As long as you can compile C++98 and have a C++ standard library available.</li>
+</ul>
+<blockquote>
+<p>没有外部依赖，只要你能编译C++ 98代码并且带有C++标准库即可。</p>
+</blockquote>
+<ul>
+<li>Write test cases as, self-registering, functions or methods.</li>
+</ul>
+<blockquote>
+<p>写测试用例，自动注册，函数或方法。</p>
+</blockquote>
+<ul>
+<li>Divide test cases into sections, each of which is run in isolation (eliminates the need for fixtures!)</li>
+</ul>
+<blockquote>
+<p>以section的形式分离测试用例，每个分别隔离运行。（排除混合的需要！）</p>
+</blockquote>
+<ul>
+<li>Use BDD-style Given-When-Then sections as well as traditional unit test cases.</li>
+</ul>
+<blockquote>
+<p>使用BDD-style Given-When-Then section段 同时也使用传统的单元测试用例。</p>
+</blockquote>
+<ul>
+<li>Only one core assertion macro for comparisons. Standard C/C++ operators are used for the comparison - yet the full expression is decomposed and lhs and rhs values are logged.</li>
+</ul>
+<blockquote>
+<p>只有一个核心assertion断言宏用来比较。标准C/C++操作符被用来比较，目前完整的表达式被分解，lhs和rhs值被记入日志。</p>
+</blockquote>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/26/计算机网络复习笔记-一/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">计算机网络复习笔记(一)</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="介绍一个C-测试框架" data-title="介绍一个C++测试框架—Catch" data-url="http://yoursite.com/2016/06/26/介绍一个C-测试框架/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"bigsharkyu"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
 
 </div>
       <footer id="footer">
@@ -277,9 +380,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
