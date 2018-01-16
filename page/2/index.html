@@ -118,7 +118,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Cpp/" style="font-size: 10px;">Cpp</a> <a href="/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Lintcode/" style="font-size: 10px;">Lintcode</a> <a href="/tags/OJ/" style="font-size: 10px;">OJ</a> <a href="/tags/Qt/" style="font-size: 10px;">Qt</a> <a href="/tags/内存/" style="font-size: 15px;">内存</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/数素数/" style="font-size: 10px;">数素数</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/程序设计/" style="font-size: 10px;">程序设计</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/结题报告/" style="font-size: 10px;">结题报告</a> <a href="/tags/解题报告/" style="font-size: 10px;">解题报告</a> <a href="/tags/计算机科学/" style="font-size: 10px;">计算机科学</a> <a href="/tags/计算机组成原理/" style="font-size: 20px;">计算机组成原理</a> <a href="/tags/计算机网络/" style="font-size: 10px;">计算机网络</a> <a href="/tags/读书/" style="font-size: 10px;">读书</a>
+						<a href="/tags/Codes/" style="font-size: 10px;">Codes</a> <a href="/tags/Cpp/" style="font-size: 15px;">Cpp</a> <a href="/tags/Debug/" style="font-size: 10px;">Debug</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Lintcode/" style="font-size: 10px;">Lintcode</a> <a href="/tags/OJ/" style="font-size: 10px;">OJ</a> <a href="/tags/Qt/" style="font-size: 10px;">Qt</a> <a href="/tags/内存/" style="font-size: 15px;">内存</a> <a href="/tags/数学/" style="font-size: 10px;">数学</a> <a href="/tags/数素数/" style="font-size: 10px;">数素数</a> <a href="/tags/方法/" style="font-size: 10px;">方法</a> <a href="/tags/测试/" style="font-size: 10px;">测试</a> <a href="/tags/程序设计/" style="font-size: 10px;">程序设计</a> <a href="/tags/算法/" style="font-size: 10px;">算法</a> <a href="/tags/结题报告/" style="font-size: 10px;">结题报告</a> <a href="/tags/解题报告/" style="font-size: 10px;">解题报告</a> <a href="/tags/计算机科学/" style="font-size: 10px;">计算机科学</a> <a href="/tags/计算机组成原理/" style="font-size: 20px;">计算机组成原理</a> <a href="/tags/计算机网络/" style="font-size: 10px;">计算机网络</a> <a href="/tags/读书/" style="font-size: 10px;">读书</a>
 					</div>
 				</section>
 				
@@ -201,6 +201,72 @@
 </nav>
 
       <div class="body-wrap">
+  
+    <article id="post-Qt项目解析之汽车仪表盘" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/02/05/Qt项目解析之汽车仪表盘/" class="article-date">
+  	<time datetime="2016-02-05T13:25:21.000Z" itemprop="datePublished">2016-02-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/02/05/Qt项目解析之汽车仪表盘/">Qt项目解析之汽车仪表盘</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="u8D77_u6E90"><a href="#u8D77_u6E90" class="headerlink" title="起源"></a>起源</h2><h3 id="u5173_u4E8E32_u4F4D_u5E93_u7684_u95EE_u9898"><a href="#u5173_u4E8E32_u4F4D_u5E93_u7684_u95EE_u9898" class="headerlink" title="关于32位库的问题"></a>关于32位库的问题</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install libc6:i386&#10;sudo -i&#10;cd /etc/apt/sources.list.d&#10;echo &#34;deb http://old-releases.ubuntu.com/ubuntu/ raring main restricted universe multiverse&#34; &#62;ia32-libs-raring.list&#10;apt-get update&#10;apt-get install ia32-libs&#10;rm /etc/apt/sources.list.d/ia32-libs-raring.list&#10;apt-get update&#10;exit&#10;sudo apt-get install gcc-multilib</span><br></pre></td></tr></table></figure>
+<p><a href="http://www.ics.com/blog/building-qt-5-raspberry-pi" target="_blank" rel="external">Qt移植教程</a></p>
+<p>To build on the Raspberry Pi we need a cross-compile toolchain. The toolchain will contain compilers, linkers and other tools that run on the host workstation but create executables for the target Raspberry Pi.</p>
+<p>For embedded development, one normally uses a vendor-supplied toolchain, but in the case of the Raspberry Pi, there is no official vendor supplied toolchain. There are several generic ARM toolchains that will suffice, however, we have chosen to use the same one the <em>bakeqtpi</em> script uses. This is a Linaro based toolchain for the ARMv6 platform with hard floating-point support. Alternatively, we could have built our own toolchain.</p>
+<p>We will create a working directory to use named “raspberry”. Our first step is to get and install a cross compiling toolchain.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkdir ~/raspberry&#10;$ cd ~/raspberry&#10;$ wget http://swap.tsmt.eu/gcc-4.7-linaro-rpi-gnueabihf.tbz&#10;$ tar xfj gcc-4.7-linaro-rpi-gnueabihf.tbz</span><br></pre></td></tr></table></figure>
+<h3 id="u5F00_u53D1_u811A_u672C"><a href="#u5F00_u53D1_u811A_u672C" class="headerlink" title="开发脚本"></a>开发脚本</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh&#10;WORKINGDIRECTORY=$HOME/raspberry&#10;TOOLCHAIN=gcc-4.7-linaro-rpi-gnueabihf&#10;MOUNTPOINT=/mnt/raspberry-rootfs&#10;export PATH=$PATH:$WORKINGDIRECTORY/$TOOLCHAIN/bin</span><br></pre></td></tr></table></figure>
+<h3 id="Windows_u4E0B_u79FB_u690D_u65B9_u6CD5"><a href="#Windows_u4E0B_u79FB_u690D_u65B9_u6CD5" class="headerlink" title="Windows下移植方法"></a>Windows下移植方法</h3><p><a href="http://www.cnblogs.com/wpf_gd/articles/5243927.html" target="_blank" rel="external">参考教程</a></p>
+<p>$$<br>\frac a b<br>$$</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Qt/">Qt</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
   
     <article id="post-对内存的思考（二）" class="article article-type-post" itemscope itemprop="blogPost">
   
